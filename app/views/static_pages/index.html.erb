@@ -1,15 +1,4 @@
 <% @posts.each do |p|%>
 
- <div class = "post-content">
-
- <h1 class="title"><%= p.title %></h1>
-  <div class="info-panel">
-  Created at: <%= l(p.created_at , :format => :long)%>
-  </div>
- <div class = "text">
- <%= p.description.html_safe%>
-  </div>
- <%= link_to "View comments", p , :class => "comments" %>
-
- </div>
+<%= render partial: "shared/post" , locals: {p: p }%>
 <% end %>

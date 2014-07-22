@@ -1,9 +1,7 @@
 <%= link_to "Go Back" , "/" %>
 
 
-<h1><%= @post.title %></h1>
-
-<%= @post.description.html_safe %>
+<%= render partial: "shared/post" , locals:{ p: @post}%>
 
 
 
