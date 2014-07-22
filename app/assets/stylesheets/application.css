@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+*{
+	margin:0;
+	padding: 0;
+	
+}
+#wrapper {
+	height:100vh;
+	width:100%;
+}
+
+header {
+	display: inline-block;
+	height:100vh;
+	width:18%;
+	background-color: rgba(210,210,210, 0.5);
+	position: fixed;
+
+}
+
+header img {
+	height: auto;
+	width: 100%;
+}
+#content{
+	display: inline-block;
+	width: 81.99%;
+	height:100%;
+	margin-left: 18%;
+	background-color: rgba(102,102,102,1)
+	
+}
+
+
+.alert , .notice {
+	position: fixed;
+	z-index: 999;
+}
+
+
+.author {
+	text-align: center;
+	font-family: sans-serif;
+	padding: 0 0 10% 0;
+	vertical-align: middle;
+	width: 100%;
+	display: block;
+	color: rgba( 0 , 169 , 157 , 1 );
+	font-weight: bolder;
+	font-size: 1.1em;
+}
+
+
+header nav a {
+  display: inline-block;
+  width:100%;
+  text-decoration: none;
+  color: black;
+  line-height: 50px;
+  font-size: 1.2em;
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  vertical-align: middle;
+   -webkit-transition: background-color  1s ease-out ,  padding-left 700ms ease-out;
+  -moz-transition: background-color 1s ease-out, padding-left 700ms ease-out;
+  -o-transition: background-color 1s ease-out , padding-left 700ms ease-out;
+  transition: background-color 1s ease-out, padding-left 700ms ease-out;
+  
+}
+
+
+header nav ul li {
+    margin-top: 2%;
+    padding-left: 6%;
+    background-color:  rgba( 210, 210 , 210 , 0.5 );
+       -webkit-transition: background-color  1s ease-out ,  padding-left 700ms ease-out;
+  -moz-transition: background-color 1s ease-out, padding-left 700ms ease-out;
+  -o-transition: background-color 1s ease-out , padding-left 700ms ease-out;
+  transition: background-color 1s ease-out, padding-left 700ms ease-out;
+    
+
+}
+
+header nav ul li:hover > a {
+   
+
+      color: white;
+}
+
+header nav ul li:hover {
+       background-color:  rgba( 0 , 169 , 157 , 1 );
+       cursor:pointer;
+       padding-left: 10%;
+}
+
+
+
+
+.admin-panel {
+  margin-top: 30%;
+}
+

@@ -1,0 +1,10 @@
+<%= link_to "Go Back" , "/" %>
+
+
+<h1><%= @post.title %></h1>
+
+<%= @post.description.html_safe %>
+
+
+
+<%= render partial: "disquis_comments" , :locals => { post: @post} %>

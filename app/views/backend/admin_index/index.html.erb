@@ -1,0 +1,25 @@
+hello admin
+
+<%= link_to "Make a new blog post" , new_backend_post_path %>
+
+<ul>
+<% @posts.each do |p|%>
+
+ <li>
+  <div class="post-item"> 
+ 	<%=p.title %>
+ 	
+ 	
+ 	<p>Created at: <%= p.created_at %>
+ 		
+ 	<%= link_to "Show" , post_path(p)%>	
+ 		|
+ 	<%= link_to "Edit" , edit_backend_post_path(p)%>	
+ 		|
+    <%= link_to 'destroy', backend_post_path(p) , :method => :delete %>
+ </li>
+
+
+<% end %>
+
+</ul>

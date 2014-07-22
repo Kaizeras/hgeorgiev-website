@@ -1,0 +1,47 @@
+// Place all the styles related to the backend/posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.info-panel {
+  height: 35px;
+  width: 100%;
+  border-top: 1px solid  rgba( 210, 210 , 210 , 0.4 );
+  vertical-align: center;
+  padding: 5px;
+}
+
+.post-content {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  color: rgba(250,250,250,1);
+  margin-top: 1%;
+  
+}
+
+.post-content > .title {
+  
+  text-align: center;
+  
+}
+
+.post-content > .text {
+  padding: 1%  0 1% 0 ;
+}
+
+.post-content > .text::first-letter {
+  font-weight: bolder;
+  font-size: 1.5em;
+  color: white;
+}
+
+.post-content > .comments {
+  text-decoration: none ;
+  color: rgba(255,255,255 , 0.5) ;
+  font-family: sans-serif ;
+  font-weight: bold ;
+  text-transform: uppercase ;
+  font-size: 0.8em ;
+
+}
