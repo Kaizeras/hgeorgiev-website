@@ -4,11 +4,13 @@
 
 
 .info-panel {
-  height: 35px;
+  height: 25px;
   width: 100%;
-  border-top: 1px solid  rgba( 210, 210 , 210 , 0.4 );
+  border-top: 1px solid  rgba( 0, 210 , 210 , 0.4 );
   vertical-align: center;
   padding: 5px;
+  background-color: rgba(0 , 169 , 157 , 0.4 );
+  vertical-align: middle;
 }
 
 .post-content {
@@ -16,13 +18,15 @@
   margin-right: 5%;
   width: 90%;
   color: rgba(250,250,250,1);
-  margin-top: 1%;
+  margin-top: 2%;
+  padding: 2% 0 2% 0;
+  
   
 }
 
 .post-content > .title {
   
-  text-align: center;
+  text-align: justify;
   
 }
 

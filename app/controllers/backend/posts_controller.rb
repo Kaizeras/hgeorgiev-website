@@ -1,4 +1,4 @@
-class Backend::PostsController < Backend::ResourceController
+class Backend::PostsController < PostsController
   
   def new
     @post = Post.new
