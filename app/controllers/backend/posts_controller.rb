@@ -22,7 +22,7 @@ class Backend::PostsController < PostsController
   def destroy
      @post = Post.find(params[:id])
      @post.destroy
-    redirect_to root_path
+    redirect_to backend_root_path
   end
   
   def show

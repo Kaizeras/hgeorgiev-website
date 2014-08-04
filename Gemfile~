@@ -23,17 +23,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 gem 'inherited_resources'
-gem 'paperclip'
-
+gem 'tinymce-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-gem 'jquery-cookie-rails'
-gem 'rails_12factor'
-
-gem 'jquery-ui-rails'
-gem "RedCloth", :require => 'redcloth'
-gem 'coderay', :require => ['coderay', 'coderay/for_redcloth']
-
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -51,3 +43,4 @@ gem 'devise'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'rails_12factor'

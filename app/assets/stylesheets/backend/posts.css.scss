@@ -11,13 +11,15 @@
   padding: 5px;
   background-color: rgba(0 , 169 , 157 , 0.4 );
   vertical-align: middle;
+  font-family: 'Titillium Web';
+  font-weight: 300;
+  font-style: italic;
 }
 
 .post-content {
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
-  color: rgba(250,250,250,1);
   margin-top: 2%;
   padding: 2% 0 2% 0;
   
@@ -25,7 +27,7 @@
 }
 
 .post-content > .title {
-  
+  font-family: 'Titillium Web', sans-serif;
   text-align: justify;
   
 }
@@ -42,9 +44,10 @@
 
 .post-content > .comments {
   text-decoration: none ;
-  color: rgba(255,255,255 , 0.5) ;
+  color: rgba(105,105,105 , 0.5) ;
   font-family: sans-serif ;
   font-weight: bold ;
+  font-family: 'Titillium web' ;
   text-transform: uppercase ;
   font-size: 0.8em ;
 

@@ -29,6 +29,22 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
   end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+   @post = Post.find(params[:id])
+   @post.update_attributes(post_params)
+
+   if @post.save
+    flash[:notice] = "Post updated!"
+    redurect_to backend_root_path
+   else 
+    redirect_to new_backend_post_path
+   end
+  end
   
   private
   

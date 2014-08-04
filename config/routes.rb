@@ -1,4 +1,5 @@
 Personalwebsite::Application.routes.draw do
+
   devise_for :admins , :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   resources :posts , only:[:show , :index]
   resources :tag , only: [:show , :index]
@@ -14,6 +15,7 @@ Personalwebsite::Application.routes.draw do
       get "admin_index/index"
    root 'admin_index#index'
    resources :posts
+   delete "posts/destroy" , to: 'posts#destroy'
    resources :tags 
     
     

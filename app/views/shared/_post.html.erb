@@ -5,7 +5,7 @@
   Created at: <%= l(p.created_at , :format => :long)%>
   </div>
  <div class = "text">
- <%= p.description.html_safe%>
+ <%=   textilize(coderay(p.description).html_safe).html_safe %>
   </div>
  <%= link_to "View comments", p , :class => "comments" %>
 
