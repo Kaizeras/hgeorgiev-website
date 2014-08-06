@@ -52,3 +52,44 @@
   font-size: 0.8em ;
 
 }
+
+ .code-header {
+
+background-color: rgba(210, 210, 210, 1);
+padding: 8px;
+color: rgba(105, 105, 105, 1);
+
+}
+
+ h2 {
+  font-family: 'Titillium web' ;
+  font-weight: 600;
+  padding-bottom: 2px;
+  border-bottom: 2px dashed rgba(0 , 169 , 157 , 1 );
+}
+
+
+code {
+  background-color:rgba(0 , 169 , 157 , 0.1);
+  color: (0 , 169 , 157 , 1) ;
+  font-weight: bold;
+}
+
+
+
+#edit {
+  width: 49%;
+  position: absolute;
+  top: 0;
+  display: inline-block;
+}
+textarea {
+  width: 100%;
+}
+#update-container {
+  width: 49%;
+   position: absolute;
+  top: 0;
+  left: 49%;
+ display: inline-block;
+}

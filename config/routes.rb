@@ -15,6 +15,7 @@ Personalwebsite::Application.routes.draw do
       get "admin_index/index"
    root 'admin_index#index'
    resources :posts
+   post "posts/:id/preview" => "posts#preview"
    delete "posts/destroy" , to: 'posts#destroy'
    resources :tags 
     

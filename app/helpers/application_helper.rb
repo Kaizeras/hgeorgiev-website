@@ -1,11 +1,13 @@
 module ApplicationHelper
  
 
-def coderay(text)
-  text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
-    content_tag("notextile", CodeRay.scan($3, $2).div(:css => :class).html_safe)
+  def coderay(text)
+    text.gsub(/\<pre( lang="(.+?)")?\>\<code( lang="(.+?)")?\>(.+?)\<\/code\>\<\/pre\>/m) do
+      lang = $4
+      text = CGI.unescapeHTML($5).gsub /\<code( lang="(.+?)")?\>|\<\/code\>/, ""
+      CodeRay.scan(text, lang).div(:css => :class)
+    end
   end
-end
 
 
 end 

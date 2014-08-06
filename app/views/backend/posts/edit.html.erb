@@ -1,10 +1,58 @@
-  <%= form_for(@post) do |f| %>
-  <%= f.label :title %>
-      <%= f.text_field :title %>
-      
-      <%= f.label :description %>
-      <%= f.text_area :description , :class => "contenta", :rows => 40, :cols => 120 %>
-      <%=  f.submit "Submit", class: "btn btn-large btn-primary" %>
+   <%= stylesheet_link_tag    "application", media: "all"  %>
+    <%= javascript_include_tag "application"%>
+ <div id="edit">
+
+<%= form_tag({:action => 'preview'}, :remote => true, :'data-update-target' => 'update-container') do %>
+  <%= text_field_tag :title , @post.title , class: "pseudo-title" %>
+<%= text_area_tag(:description , @post.description , rows: 40 , cols: 120 , :class => "pseudo-desc" )%>
+<%= submit_tag 'Preview post', :disable_with => 'Please wait...', :class => 'submit' %>
+<% end %>
+
+
+  <%= form_for @post , url: backend_post_path(@post)   do |f| %>
+      <%= f.hidden_field :title ,  class: "real-title" %>
+      <%= f.hidden_field :description , :class => "real-desc", :rows => 40, :cols => 120 %>
+      <%=  f.submit "Submit", class: "btn btn-large btn-primary"   %>
    <% end %>  
 
-   
+
+</div>
+
+
+
+<div id="update-container">
+
+
+</div>
+
+
+
+
+<script type = "text/javascript">
+
+  $(document).ready(function() {
+
+  $('.pseudo-desc').change( function() {
+    $('.real-desc').val(  $('.pseudo-desc').val()) 
+
+
+    });
+
+  $('.pseudo-title').change( function() {
+    $('.real-title').val(  $('.pseudo-title').val()) 
+
+
+    });
+
+});
+
+
+$(function() {
+  $('form[data-update-target]').on('ajax:success', function(evt, data) {
+  var target = $(this).data('update-target');
+  $('#' + target).html(data);
+  });
+});
+
+
+</script>
