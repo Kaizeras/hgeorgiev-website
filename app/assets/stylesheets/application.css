@@ -148,9 +148,16 @@ header nav ul li:hover {
 position: fixed;
 margin-left: 18%;
 display: block;
-width: 25px;
-height:60px;
+width: 4%;
+height:30px;
 cursor: pointer;
-background-color: red;
+background-color: rgba(105,105,105, 0.5);
+z-index:999;
+font-size: 0.5em;
+color: white;
 }
 
+#go-back {
+  margin-top: 50px;
+  display: block;
+}

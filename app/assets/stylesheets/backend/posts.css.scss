@@ -38,8 +38,11 @@
 
 .post-content > .text::first-letter {
   font-weight: bolder;
-  font-size: 1.5em;
-  color: white;
+  font-size: 3em;
+  padding: 1px;
+  background-color: rgba(210,210,210, 0.2);
+  color: rgba(105,105,105 , 1);
+  letter-spacing: -2px;
 }
 
 .post-content > .comments {
@@ -54,7 +57,7 @@
 }
 
  .code-header {
-
+ margin-top: 1em;
 background-color: rgba(210, 210, 210, 1);
 padding: 8px;
 color: rgba(105, 105, 105, 1);
@@ -64,7 +67,10 @@ color: rgba(105, 105, 105, 1);
  h2 {
   font-family: 'Titillium web' ;
   font-weight: 600;
-  padding-bottom: 2px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 6px;
   border-bottom: 2px dashed rgba(0 , 169 , 157 , 1 );
 }
 
@@ -73,6 +79,7 @@ code {
   background-color:rgba(0 , 169 , 157 , 0.1);
   color: (0 , 169 , 157 , 1) ;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 
@@ -92,4 +99,14 @@ textarea {
   top: 0;
   left: 49%;
  display: inline-block;
+}
+
+.text  a:visited {
+  color: rgba(105,105,105, 1);
+}
+
+.text  a:link {
+
+ color: rgba( 0, 169 , 157 , 1 );
+
 }

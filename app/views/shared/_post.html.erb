@@ -7,6 +7,8 @@
  <div class = "text">
  <%=   (coderay(RedCloth.new(p.description).to_html)).html_safe %>
   </div>
+ <% if current_page?(root_path) %>
  <%= link_to "View comments", p , :class => "comments" %>
+  <% end  %> 
 
  </div>
