@@ -8,6 +8,14 @@ module ApplicationHelper
       CodeRay.scan(text, lang).div(:css => :class)
     end
   end
-
+ 
+  def full_title(page_title)
+    base_title = "Hristo Georgiev"
+    if page_title.empty?
+      base_title
+    else
+      "#{base_title} | #{page_title}"
+    end
+  end
 
 end 
