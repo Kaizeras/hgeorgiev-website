@@ -353,3 +353,41 @@ left: 0;
 }
 
 
+@media only screen and (max-width: 767px) {
+
+   h1 {
+      font-size: 3em;
+   }
+
+   h2 {
+      font-size: 2em;
+   }
+
+   .circular-sm {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 37px;
+    margin-right: 37px;
+   }
+
+   #main-menu{
+    font-size: 1em;
+    margin-bottom: 0;
+   }
+
+   .short-bio {
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+   }
+
+   #profiles {
+    margin-top: 3px;
+   }
+   .hi-icon {
+     margin-top: 0;
+   }
+
+
+
+}
