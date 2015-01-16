@@ -1,22 +1,28 @@
+<aside class="left-off-canvas-menu ">
+    <div class="circular-sm"><%= link_to "" , about_path %></div>
+    <p class="short-bio"> Developer, entrepreneur , fitness enthusiast. Studying Information Systems at AUBG. </p>
 
-  <div class="slide-header"> Expand/
-     <br/> Contract </div>
-<header style = " width:18%;">
-<%= link_to image_tag("logo9.png") , root_path %>
-<nav>
-<div class="author"> Hristo Georgiev Georgiev </div>
-<ul>
-<li><%= link_to "Home" , root_path %></li>
-<li><%= link_to "About" , about_path%></li>
-</ul>
-</nav>
+    <ul id="main-menu">
+    <li><%= link_to "Blog" , posts_path(@post) %> </li>
+    <li><a href="mailto:hgeorgievkzr@gmail.com">Contact</a></li>
+    <li><%= link_to "About" , about_path%></li>
 
-<div class= "admin-panel">
-<% if  admin_signed_in? %>
-<%= link_to "Log out" , destroy_admin_session_path , :method => :delete %>
-<%= link_to "Admin panel" , backend_root_path %>
-</div>
-<% end %>
-</header>
-	
+    </ul>
+    <div id="profiles">
+    <a href="http://stackoverflow.com/users/2808883/hristo-georgiev " target="_blank"><i class="hi-icon fi-social-stack-overflow size-40"></i></a>
+    <a href="https://github.com/Kaizeras" target="_blank"><i class="hi-icon fi-social-github size-40"></i></a>
+    <a href="https://www.facebook.com/KaizeraKZR" target="_blank"><i class="hi-icon fi-social-facebook size-40"></i></a>
+
+
+    </div>
+
+    <div class= "admin-panel">
+    <% if  admin_signed_in? %>
+    <%= link_to "Log out" , destroy_admin_session_path , :method => :delete %>
+    <%= link_to "Admin panel" , backend_root_path %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    </div>
+    <% end %>
+</aside>
 

@@ -1,0 +1,20 @@
+<nav class="right-off-canvas-menu">
+
+<% @posts_nav_months.sort.reverse.each do |year, post_month_group| %>
+<ul class="off-canvas-list">
+  <li><label><%=h year.strftime("%G") %></label></li>
+  <% post_month_group.group_by { |t| t.created_at.beginning_of_month}.each do |month , posts_by_month| %>
+  <li class="has-submenu"><a href="#"><%= h month.strftime("%B") %></a>
+    <ul class="right-submenu">
+      <li class="back"> <a href="#"> Back </a> </li>
+      <li><label><%= h month.strftime("%B") %> </label></li>
+      <% for post in posts_by_month %>
+       <li name="<%= post.id %>" > <%= h link_to post.title %> </li>
+      <%end%>
+    </ul>
+ </li>
+  <%end%>
+
+
+<%end%>
+</nav>

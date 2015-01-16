@@ -40,10 +40,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'skrollr-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'meta-tags'
+gem 'foundation-rails'
+   gem 'foundation-icons-sass-rails'
+gem 'friendly_id', '~> 5.1.0'
 # Use unicorn as the app server
 # gem 'unicorn'
 

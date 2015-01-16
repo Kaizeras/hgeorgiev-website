@@ -1,7 +1,9 @@
 <%  provide(:title , @post.title ) %>
 <% set_meta_tags :og => { :title => @post.title } %>
 
-<%= link_to "Go Back" , "/" , :id => "go-back" %>
+  
+
+
 
 
 <%= render partial: "shared/post" , locals:{ p: @post}%>

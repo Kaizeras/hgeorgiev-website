@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= favicon_link_tag "favicon.ico" %>
+        <%= display_meta_tags :og => { :image => image_url("me.jpg") } %>
+      <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", media: "all"  %>
+    <%= stylesheet_link_tag "coderay" %>
+    <%= javascript_include_tag "application"%>
+    <%= csrf_meta_tags %>
+
+    <%= javascript_include_tag "snap.svg-min.js" %>
+    <%= javascript_include_tag "svg-anim.js" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+
+  </head>
+  
+  <body>
+
+<div class="off-canvas-wrap"  data-offcanvas>
+  <div class="inner-wrap" id="wrap">
+    <nav class="tab-bar no-top-border">
+        <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon fixed" href="#"><span></span> </a>
+        </section>
+      </section>
+    </nav>
+    <%= render partial: "shared/header"%>
+  <div class="toprow ">
+      <%= yield %>
+    </div><a class="exit-off-canvas"></a>
+</div>
+ 
+
+  </body>
+</html>

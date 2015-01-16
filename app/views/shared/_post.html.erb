@@ -1,14 +1,16 @@
- <div class = "post-content">
 
- <h1 class="title"><%= p.title %></h1>
-  <div class="info-panel">
-  Created at: <%= l(p.created_at , :format => :long)%>
-  </div>
- <div class = "text">
- <%=   (coderay(RedCloth.new(p.description).to_html)).html_safe %>
-  </div>
- <% if current_page?(root_path) %>
- <%= link_to "View comments", p , :class => "comments" %>
-  <% end  %> 
 
- </div>
+
+<div id="post-title-contain"> <h1 id="post-title" ><%= p.title %></h1></div>
+
+    <div class="info-panel">
+    Created at: <%= l(p.created_at , :format => :long)%>
+    </div>
+   <div class = "text">
+   <%=   (coderay(RedCloth.new(p.description).to_html)).html_safe %>
+    </div>
+
+
+  <%= render partial: "disquis_comments" , :locals => { post: @post} %>
+
+

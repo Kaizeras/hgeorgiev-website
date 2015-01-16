@@ -1,0 +1,12 @@
+
+  <ul class="postslist">
+  <% @posts.each do |post|%>
+
+   <li>
+    <h3 ><%= link_to "#{post.title}" , post %></h3>
+
+      <div class="post-date-index"><%= post.created_at.to_formatted_s(:long) %></div>
+   </li>
+
+  <% end %>
+</ul>

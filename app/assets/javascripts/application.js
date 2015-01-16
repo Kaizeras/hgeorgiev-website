@@ -13,45 +13,11 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require jquery.cookie
-//= require_tree .
 //= require jquery-ui
-
-$(document).ready(function () { 
-
- if ($.cookie('closed')) {
-        $('.slide-header').css('marginLeft' , '5%');
-        $('header').css('width' , '5%');
-        $('#content').css({width: '94.99%' , marginLeft: '5%'});
-        $('.author').hide();
-     } else if($.cookie('open')) {
-        $('.slide-header').css('marginLeft' , '18%');
-        $('header').css('width' , '18%');
-        $('#content').css({width: '81.99%' , marginLeft: '18%'});
-        $('.author').show();
-     };
-
-  $('.slide-header').click(function(){
-
-   if($('header')[0].style.width == '5%')  {
-    $.removeCookie('closed', { path: '/' });
-    $('.slide-header').animate({marginLeft: "18%"}, 250 )
-    $('header').animate({ width: '18%' } , 250 )
-    $('.author').fadeIn(100);
-    $('#content').animate({ width: '81.99%', marginLeft: '18%' } , 250 )
-    $.cookie('open' , 'open' , { path: '/' });
-  }
-   else if($('header')[0].style.width == '18%') {
-    $.removeCookie('open' , { path: '/' });
-    $('.slide-header').animate({ marginLeft: "5%" }, 250)
-    $('header').animate({ width: '5%' } , 250 )
-    $('.author').fadeOut(100);
-    $('#content').animate({ width: '94.99%', marginLeft: '5%' } , 250 )
-     $.cookie('closed' , 'closed' , { path: '/' });
-   }
-   });
-
-});
+//= require skrollr
 
 
+$(function(){ $(document).foundation(); });
 

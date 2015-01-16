@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require foundation_and_overrides
+
+ *= require_tree .
+*= require jquery-ui
+ */
+
+@import 'foundation-icons';
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,700);
+*{
+	margin:0;
+	padding: 0;
+	
+}
+
+.toprow {
+    overflow-y: auto;
+}
+
+
+.toprow,
+body,
+html,
+.off-canvas-wrap, 
+.off-canvas-wrap .inner-wrap,
+.row {
+    height: 100%;
+    width: 100%;
+}
+
+.alert , .notice {
+	position: fixed;
+	z-index: 999;
+}
+
+
+
+
+body {
+  font-family: "Titillium Web" !important;
+}
+
+
+.slide-header {
+position: fixed;
+margin-left: 18%;
+display: block;
+width: 4%;
+height:30px;
+cursor: pointer;
+background-color: rgba(105,105,105, 0.5);
+z-index:999;
+font-size: 0.5em;
+color: white;
+}
+
+#go-back {
+  margin-top: 50px;
+  display: block;
+}
+
+#right {
+  float: right;
+}
+
+#wrap {
+  min-height: 850px ;
+}
+
+.push-down {
+   margin-top: 3.75rem !important ;
+}
