@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
  
 
-
+ layout 'show' , :only => [:show]
 
   def index
     @posts = Post.all.order("created_at DESC")
