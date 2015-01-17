@@ -27,16 +27,15 @@
       </section>
     </nav>
     <%= render partial: "shared/header"%>
- <div class="toprow large-12 columns">
-    <section class="middle tab-bar-section row">
+
+    <section class="middle tab-bar-section large-12 columns">
         <div class="title-header line-up"><%= link_to "Hristo Georgiev" , root_path %></div>
     </section>
-  <div class="row push-down">
-    <div class="large-12 columns">
-      <%= yield %>
+
+  <div class="toprow row push-down">
+      <%= yield %><a class="exit-off-canvas"></a>
     </div>
-  </div>
-</div><a class="exit-off-canvas"></a>
+</div>
  
 
   </body>
