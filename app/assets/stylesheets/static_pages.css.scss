@@ -340,7 +340,8 @@ left: 0;
   background: image-url("about-bg-left.png") , image-url("about-bg-right.png") ;
   background-position: center left , center right;
   margin-top: -8px;
-  height: 1000px;
+  margin-bottom: 8px;
+  min-height: 1000px;
   background-repeat: no-repeat;
 
 }
@@ -393,7 +394,9 @@ h1#about-header {
    .hi-icon {
      margin-top: 0;
    }
-
+   .bg-wrap {
+  min-height: 3000px;
+ }
 
 
 }
@@ -403,8 +406,19 @@ h1#about-header {
     min-height: 100%;
 }
 
-.off-canvas-wrap{  
+  .left-off-canvas-menu {  
     height: 100%;
     overflow-y: auto;
 }
+
+
+}
+
+
+
+
+
+#svgC {
+  width: 100%;
+
 }
