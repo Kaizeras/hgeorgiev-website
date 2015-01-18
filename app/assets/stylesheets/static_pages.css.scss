@@ -345,6 +345,12 @@ left: 0;
 
 }
 
+h1#about-header {
+  color: #696969;
+  text-align: center;
+  line-height: 100px;
+  font-weight: 600;
+}
 
 @media screen and (max-width: 1150px) { /* Specific to this particular image */
   .bg-wrap {
@@ -390,4 +396,15 @@ left: 0;
 
 
 
+}
+
+@media only screen and (max-height: 450px) {
+.off-canvas-wrap, .inner-wrap {
+    min-height: 100%;
+}
+
+.off-canvas-wrap{  
+    height: 100%;
+    overflow-y: auto;
+}
 }
