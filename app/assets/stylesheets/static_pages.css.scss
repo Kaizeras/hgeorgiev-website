@@ -190,17 +190,23 @@ left: 0;
 
 
 
-.short-bio {
-  margin: 25px;
-
-}
-
 
 .short-bio {
   color: #fff;
   opacity: 0.8;
+  margin: 25px;
+
+
+}
+.short-bio > a {
+  color: inherit;
+
 }
 
+
+.short-bio > a:hover {
+  text-decoration: underline;
+}
 
 
 .tab-bar {
