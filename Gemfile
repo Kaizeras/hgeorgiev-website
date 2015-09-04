@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-#gem 'RedCloth' , :require => 'redcloth'
+gem 'RedCloth' , :require => 'redcloth'
 gem 'inherited_resources'
 gem 'paperclip'
 gem 'social-share-button' , :github => 'kaizeras/social-share-button'

@@ -4,13 +4,13 @@
        <li><label><%= year.strftime('%G')%> </label></li>
         <% posts_by_month.group_by { |t| t.created_at.beginning_of_month }.each do |month, posts| %>
        <li class="has-submenu"><a href="#"><%= h month.strftime('%B') %></a>
-          <%for post in posts %>
            <ul class="right-submenu">
                <li class="back"><a href="#">Back</a></li>
+              <%for post in posts %>
                <li><%=link_to post.title , post_path(post.id) %></li>
-
+              <% end %>
            </ul>
-          <% end %>
+
        </li>
         <%end%>
      </ul>
