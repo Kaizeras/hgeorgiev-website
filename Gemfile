@@ -32,8 +32,7 @@ gem 'jquery-cookie-rails'
 gem 'rails_12factor'
 
 gem 'jquery-ui-rails'
-#gem "RedCloth", :require => 'redcloth'
-#gem 'coderay', :require => ['coderay', 'coderay/for_redcloth']
+gem 'coderay', :require => ['coderay', 'coderay/for_redcloth']
 
 
 group :doc do

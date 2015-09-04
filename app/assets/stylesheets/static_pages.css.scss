@@ -267,7 +267,32 @@ left: 0;
   -moz-transition: box-shadow 0.2s;
   transition: box-shadow 0.2s;
 }
+
 .hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+
+.hi-icon:before {
+  font-size: 40px;
+  line-height: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+.hi-icon-header {
   display: inline-block;
   font-size: 0px;
   cursor: pointer;
@@ -281,7 +306,7 @@ left: 0;
   color: #fff;
 }
 
-.hi-icon:after {
+.hi-icon-header:after {
   pointer-events: none;
   position: absolute;
   width: 100%;
@@ -293,7 +318,7 @@ left: 0;
   box-sizing: content-box;
 }
 
-.hi-icon:before {
+.hi-icon-header:before {
   font-size: 30px;
   line-height: 55px;
   font-style: normal;
