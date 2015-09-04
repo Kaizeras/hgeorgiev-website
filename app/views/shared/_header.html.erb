@@ -11,13 +11,12 @@
     <div id="profiles">
     <a href="http://stackoverflow.com/users/2808883/hristo-georgiev " target="_blank"><i class="hi-icon fi-social-stack-overflow size-40"></i></a>
     <a href="https://github.com/Kaizeras" target="_blank"><i class="hi-icon fi-social-github size-40"></i></a>
-    <a href="https://www.facebook.com/KaizeraKZR" target="_blank"><i class="hi-icon fi-social-facebook size-40"></i></a>
+    <a href="https://www.linkedin.com/in/hggeorgiev" target="_blank"><i class="hi-icon fi-social-linkedin size-40"></i></a>
 
 
     </div>
-
+   <% if  admin_signed_in? %>
     <div class= "admin-panel">
-    <% if  admin_signed_in? %>
     <%= link_to "Log out" , destroy_admin_session_path , :method => :delete %>
     <%= link_to "Admin panel" , backend_root_path %>
     <p class="notice"><%= notice %></p>
@@ -25,4 +24,3 @@
     </div>
     <% end %>
 </aside>
-

@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require foundation_and_overrides
-
+ *= require social-share-button
  *= require_tree .
 *= require jquery-ui
  */
@@ -20,7 +20,7 @@
 *{
 	margin:0;
 	padding: 0;
-	
+
 }
 
 .toprow {
@@ -31,7 +31,7 @@
 .toprow,
 body,
 html,
-.off-canvas-wrap, 
+.off-canvas-wrap,
 .off-canvas-wrap .inner-wrap,
 .row {
     height: 100%;
@@ -80,5 +80,5 @@ color: white;
 .push-down {
    margin-top: 5.75rem !important ;
    min-height: 1000px
-   
+
 }

@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag "coderay" %>
     <%= javascript_include_tag "application"%>
     <%= csrf_meta_tags %>
-   
+
        <%= javascript_include_tag "main-nav-control.js" %>
     <%= javascript_include_tag "vendor/modernizr" %>
 
@@ -24,10 +24,14 @@
         <section class="left-small">
             <a class="left-off-canvas-toggle menu-icon fixed" href="#"><span></span> </a>
         </section>
-      </section>
+
+        <section class="right-small">
+          <a class="right-off-canvas-toggle archive" ><span>ARCHIVE</span></a>
+        </section>
     </nav>
 
     <%= render partial: "shared/header"%>
+    <%= render partial: "shared/archive" %>
  <div class=" large-12 columns">
     <section class="middle tab-bar-section row">
         <div class="title-header line-up"><%= link_to "Hristo Georgiev" , root_path %></div>
@@ -36,10 +40,9 @@
 
       <%= yield %>
     </div>
-  </div><
- 
+  </div>
+
 </div>
 
   </body>
 </html>
-

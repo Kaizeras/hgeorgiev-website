@@ -1,0 +1,30 @@
+<aside class="right-off-canvas-menu">
+  <% @post_months.sort.reverse.each do |year, posts_by_month| %>
+     <ul class="off-canvas-list">
+       <li><label><%= year.strftime('%G')%> </label></li>
+        <% posts_by_month.group_by { |t| t.created_at.beginning_of_month }.each do |month, posts| %>
+       <li class="has-submenu"><a href="#"><%= h month.strftime('%B') %></a>
+          <%for post in posts %>
+           <ul class="right-submenu">
+               <li class="back"><a href="#">Back</a></li>
+               <li><%=link_to post.title , post_path(post.id) %></li>
+
+           </ul>
+          <% end %>
+       </li>
+        <%end%>
+     </ul>
+    <% end %>
+
+
+      <div class="tags-cloud">
+        <h4>Tag cloud</h4>
+         <ul>
+          <% tag_cloud Tag.counts, %w{tag-size-1 tag-size-2 tag-size-3 tag-size-4} do |tag, css_class| %>
+            <li>
+             <%= link_to tag.name, tag_path(tag.name), :class=> css_class  %>
+            </li>
+          <% end %>
+        </ul>
+     </div>
+   </aside>

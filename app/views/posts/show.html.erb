@@ -1,12 +1,11 @@
 <%  provide(:title , @post.title ) %>
 <% set_meta_tags :og => { :title => @post.title } , :title => @post.title %>
 
-  
 
 
 
-
-<%= render partial: "shared/post" , locals:{ p: @post}%>
+<%= render partial: "share_buttons" , locals:{ p: @post} %>
+<%= render partial: "post" , locals:{ p: @post}%>
 
 
 

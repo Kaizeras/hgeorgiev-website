@@ -1,5 +1,8 @@
 
   <ul class="postslist toprow row push-down">
+  <% if params[:tag] %>
+    <h1 class="tagged-with"> Posts tagged with <span class="tagged-with-word"><%= params[:tag] %></span> </h1>
+  <% end %>
   <% @posts.each do |post|%>
 
    <li>

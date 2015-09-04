@@ -3,16 +3,16 @@ development:
   encoding: utf8
   database: personal_development
   pool: 5
-  username: kaizeras
-  password:
+  username: postgres
+  password: 1234
 
 test: &TEST
   adapter: postgresql
   encoding: utf8
   database: personal_test
   pool: 5
-  username: kaizeras
-  password:
+  username: postgres
+  password: 1234
 
 production:
   adapter: postgresql

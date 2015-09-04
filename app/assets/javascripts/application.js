@@ -17,7 +17,7 @@
 //= require jquery.cookie
 //= require jquery-ui
 //= require skrollr
+//= require social-share-button
 
 
 $(function(){ $(document).foundation(); });
-

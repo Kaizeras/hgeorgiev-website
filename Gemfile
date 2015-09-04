@@ -21,9 +21,10 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
+#gem 'RedCloth' , :require => 'redcloth'
 gem 'inherited_resources'
 gem 'paperclip'
+gem 'social-share-button' , :github => 'kaizeras/social-share-button'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -31,8 +32,8 @@ gem 'jquery-cookie-rails'
 gem 'rails_12factor'
 
 gem 'jquery-ui-rails'
-gem "RedCloth", :require => 'redcloth'
-gem 'coderay', :require => ['coderay', 'coderay/for_redcloth']
+#gem "RedCloth", :require => 'redcloth'
+#gem 'coderay', :require => ['coderay', 'coderay/for_redcloth']
 
 
 group :doc do
@@ -45,8 +46,8 @@ gem 'skrollr-rails'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'meta-tags'
-gem 'foundation-rails'
-   gem 'foundation-icons-sass-rails'
+gem 'foundation-rails', '5.4.5'
+gem 'foundation-icons-sass-rails'
 gem 'friendly_id', '~> 5.1.0'
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -56,3 +57,5 @@ gem 'friendly_id', '~> 5.1.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin]

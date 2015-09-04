@@ -1,28 +1,37 @@
-hello admin
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application"%>
-  <%= csrf_meta_tags %>
 
-<%= link_to "Make a new blog post" , new_backend_post_path %>
+<div class="row" >
 
-<ul>
-<% @posts.each do |p|%>
+  <div class="small-12 large-12 columns" >
+    <table>
+      <thead>
+        <tr>
+          <th width="400">Title</th>
+          <th width="200">Created at</th>
+          <th width="350">Actions</th>
+        </tr>
+      </thead>
 
- <li>
-  <div class="post-item"> 
- 	<%=p.title %>
- 	
- 	
- 	<p>Created at: <%= p.created_at %>
- 		
- 	<%= link_to "Show" , post_path(p)%>	
- 		|
- 	<%= link_to "Edit" , edit_backend_post_path(p)%>	
- 		|
-    <%= link_to 'destroy', backend_post_path(p) , :method => :delete %>
- </li>
+      <tbody>
+      <% @posts.each do |p|%>
+        <tr>
+         <td><%=p.title %></td>
+         <td><%=p.created_at %></td>
+         <td>
+           	<%= link_to "Show" , post_path(p.id)%>
+         		|
+         	  <%= link_to "Edit" , edit_backend_post_path(p.id)%>
+         		|
+            <%= link_to 'destroy', backend_post_path(p.id) , :method => :delete %>
+
+          </td>
+       </tr>
+      <%end%>
 
 
-<% end %>
 
-</ul>
+     </tbody>
+
+    </table>
+  </div>
+
+</div>

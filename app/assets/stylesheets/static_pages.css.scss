@@ -76,10 +76,10 @@
   font-weight: bolder;
   font-size: 1.1em;
 }
-//nav menu 
-@media all and (min-width: 1000px) {  
+//nav menu
+@media all and (min-width: 1000px) {
 
-  #main-menu  { font-size: 1.20em;  } 
+  #main-menu  { font-size: 1.20em;  }
 #main-menu li a::before {
   margin-right: 10px;
   content: '<';
@@ -117,12 +117,12 @@ webkit-transition: background-color 1.2s ease-in-out;
 -moz-transition: background-color 1.2s ease-in-out;
 -o-transition: background-color 1.2s ease-in-out;
 transition: background-color 1.2s ease-in-out;
-  
+
 }
 
 
 .circular-sm:hover {
-  
+
   background-color: rgba(0,169,157, 1);
 }
 
@@ -227,6 +227,8 @@ left: 0;
 
 
 
+
+
 #profiles > a > i {
     display: inline-block;
   color: white;
@@ -286,8 +288,8 @@ left: 0;
   height: 100%;
   border-radius: 50%;
   content: '';
-  -webkit-box-sizing: content-box; 
-  -moz-box-sizing: content-box; 
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -333,7 +335,7 @@ left: 0;
          -moz-transition: border-color 750ms ease;
            -o-transition: border-color 750ms ease;
           -ms-transition: border-color 750ms ease;
-              transition: border-color 750ms ease;  
+              transition: border-color 750ms ease;
 }
 
 .no-top-border {
@@ -357,6 +359,33 @@ h1#about-header {
   text-align: center;
   line-height: 100px;
   font-weight: 600;
+}
+
+
+
+
+#svgC {
+  width: 100%;
+
+}
+
+
+.archive span {
+  color:#696969;
+  font-weight: 700;
+
+}
+
+.archive span:hover {
+  text-decoration:underline;
+}
+
+.right-small {
+  width: 6rem;
+}
+
+.admin-panel a {
+  color: white;
 }
 
 @media screen and (max-width: 1150px) { /* Specific to this particular image */
@@ -404,6 +433,34 @@ h1#about-header {
   min-height: 3000px;
  }
 
+ .title-header > a  {
+		 font-size: 1em !important;
+ }
+
+
+ .social-share-buttons a {
+		width: 32px !important;
+		height: 32px !important;
+		margin-right: 5px;
+
+ }
+.social-share-buttons a i {
+	font-size: 32px;
+}
+.social-share-buttons a i:before {
+	 line-height: 32px;
+	 width: 25px;
+}
+
+
+.tab-bar-section.middle {
+    left: 2rem !important;
+    right: 3.75rem;
+}
+
+.right-small {
+    width: 5rem !important;
+}
 
 }
 
@@ -412,19 +469,11 @@ h1#about-header {
     min-height: 100%;
 }
 
-  .left-off-canvas-menu {  
+  .left-off-canvas-menu {
     height: 100%;
     overflow-y: auto;
 }
 
 
-}
-
-
-
-
-
-#svgC {
-  width: 100%;
 
 }

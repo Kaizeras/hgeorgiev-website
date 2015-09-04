@@ -1,12 +1,27 @@
-	<div class="wrapper">
+	<div class="wrapper row">
+
+	 <div class="small-6 large-6 columns">
+		<%= form_tag({:action => 'preview'}, :remote => true, :'data-update-target' => 'update-container') do %>
+		    <%= text_field_tag(:title, :title , class: "pseudo-title")%>
+		  <%= text_area_tag(:description , :description ,  rows: 40 , cols: 120 , :class => "pseudo-desc" )%>
+		  <%= submit_tag 'Preview post', :disable_with => 'Please wait...', :class => 'submit' %>
+	  <% end %>
+	</div>
 
   <%= form_for(:post , url: backend_posts_path) do |f| %>
-	<%= f.label :title %>
-      <%= f.text_field :title %>
-      
-      <%= f.label :description %>
-      <%= f.text_area :description , :class => "contenta", :rows => 40, :cols => 120 %>
+      <%= f.hidden_field :title , :class=>"real-title"%>
+      <%= f.hidden_field :description , :class => "real-desc", :rows => 40, :cols => 120 %>
+			<%= f.text_field :all_tags, placeholder: "Tags separated with comma" %>
       <%=  f.submit "Submit", class: "btn btn-large btn-primary" %>
-   <% end %>  
+   <% end %>
 
+
+	 <div class="small-6 large-6 columns" id="update-container">
+
+
+	 </div>
 </div>
+
+
+
+<%= javascript_include_tag 'posts' %>
